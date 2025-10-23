@@ -1,0 +1,254 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #6dd5fa, #2980b9);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .calculator {
+        background-color: #1e1e2f;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        width: 320px;
+        text-align: center;
+    }
+
+    .calculator h1 {
+        color: #00ffcc;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: none;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    select {
+        width: 50%;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    button {
+        width: 50%;
+        padding: 10px;
+        font-size: 16px;
+        color: white;
+        background-color: #00b894;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background-color: #019875;
+    }
+
+    .result {
+        margin-top: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .note {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #aaa;
+    }
+</style>
+
+<body>
+    <h1>Faulty Calculator</h1>
+    <div class="calc">
+        "This is a Faulty Calculator Application which gives wrong output for only 10% of times."
+        <p>90% of times it gives the correct desired output.</p>
+    </div> -->
+    <!-- <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+
+    <br>
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option> -->
+        <!-- <option value="/">/</option>
+    </select>
+
+    <br>
+    <button onclick="calculate()">Calculate</button>
+
+    <div class="result" id="result">Result will appear here...</div>
+    <div class="note">⚠️ Works incorrectly 10% of the time!</div>
+    </div>
+
+    <a href="https://www.codewithharry.com" target="_blank">Code with Harry</a>
+    <script src="faultyCalc.js"></script>
+</body> -->
+
+
+<!-- </html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faulty Calculator</title>
+
+    <style>
+        /* 🎨 General Page Style */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #6dd5fa, #2980b9);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 📦 Calculator Box */
+        .calculator {
+            background-color: #1e1e2f;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            text-align: center;
+        }
+
+        .calculator h1 {
+            color: #00ffcc;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        select {
+            width: 50%;
+            padding: 8px;
+            border-radius: 8px;
+            border: none;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #00b894;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #019875;
+        }
+
+        .result {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <h1> Faulty Calculator</h1>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+
+        <br>
+        <select id="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <br>
+        <button onclick="calculate()">Calculate</button>
+
+        <div class="result" id="result">Result will appear here...</div>
+        <div class="note"> Works incorrectly 10% of the time!</div>
+    </div>
+
+    <script>
+        function calculate() {
+            let random = Math.random();
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let c = document.getElementById("operation").value;
+
+            const obj = {
+                "+": "-",
+                "-": "/",
+                "*": "+",
+                "/": "**"
+            };
+
+            let res;
+            if (random > 0.1) {
+                if (c == "+") res = a + b;
+                else if (c == "-") res = a - b;
+                else if (c == "*") res = a * b;
+                else res = a / b;
+            } else {
+                c = obj[c];
+                if (c == "+") res = a + b;
+                else if (c == "-") res = a - b;
+                else if (c == "*") res = a * b;
+                else if (c == "/") res = a / b;
+                else if (c == "**") res = a ** b;
+            }
+
+            document.getElementById("result").innerText = "Result: " + res;
+        }
+    </script>
+</body>
+</html>
