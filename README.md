@@ -6,7 +6,7 @@ While it works correctly 90% of the time, there’s always a 10% chance it will 
 
 Built using HTML, CSS, and JavaScript, this project blends logic, randomness, and fun to demonstrate DOM manipulation, event handling, and conditional programming in a creative way.
 
-🔧 Features
+🔧 Features:-
 
 Performs basic arithmetic operations:
 
@@ -32,7 +32,7 @@ Randomization using Math.random()
 
 Updating the DOM dynamically
 
-⚙️ How It Works
+⚙️ How It Works:-
 
 The user enters two numbers and selects an operation (+, -, *, or /).
 
@@ -48,7 +48,7 @@ The output is then displayed on the calculator screen.
 
 This introduces a playful “uncertainty factor,” making it a fun experiment rather than a reliable calculator.
 
-🖥️ Tech Stack
+🖥️ Tech Stack:-
 
 HTML5 — structure of the calculator
 
